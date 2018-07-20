@@ -58,6 +58,7 @@ const actions = {
 
                             if (isFile) {
                                 if (reg.test(filename)) {
+                                    item.name = filename;
                                     item.url = filedir;
                                     item.content = fs.readFileSync(filedir, 'utf-8');
                                     listInfo.push(item);
